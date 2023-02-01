@@ -10,7 +10,11 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write --plugin-search-dir=. .",
-    "lint": "eslint --fix --env-info ."
+    "lint": "eslint --fix --env-info .",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*.{astro,cjs,ts,json,md,css}": "pnpm run format"
   },
   "dependencies": {
     "@astrojs/tailwind": "^3.0.1",
@@ -24,6 +28,8 @@
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-astro": "^0.23.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.1.0",
     "prettier": "2.8.3",
     "prettier-plugin-astro": "^0.8.0",
     "prettier-plugin-tailwindcss": "^0.2.2",
