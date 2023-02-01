@@ -1,15 +1,12 @@
 ---
 import BlogPreview from '@/components/BlogPreview.astro';
 import { getCollection } from 'astro:content';
-import NotificationSignUp from './NotificationSignUp.astro';
 
 const blogPosts = await getCollection('blog');
-console.log('blogPosts', blogPosts);
 ---
 
 <div class="mx-auto px-6 pt-16 max-w-2xl pb-20 lg:px-8 lg:pt-24 lg:pb-28">
   <div class="relative mx-auto max-w-lg lg:max-w-7xl">
-    <NotificationSignUp />
     <div class="mt-6 grid gap-16 pt-10 lg:gap-x-5 lg:gap-y-12">
       {
         blogPosts.map((frontMatter) => (

@@ -1,0 +1,42 @@
+---
+type SiteRoute = {
+  href: string;
+  display: string;
+};
+
+const routes: SiteRoute[] = [
+  {
+    href: '/',
+    display: 'Home',
+  },
+  {
+    href: '/about',
+    display: 'About',
+  },
+  {
+    href: '/blog',
+    display: 'Blog',
+  },
+];
+---
+
+<span class="pb-12 isolate flex justify-center rounded-md shadow-sm">
+  <a
+    href="/"
+    type="button"
+    class="relative inline-flex items-center rounded-l-md border border-gray-800 bg-black px-4 py-2 text-sm font-medium text-gray-300 hover:bg-stone-900 focus:z-10 focus:border-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-800"
+    >Home</a
+  >
+  <a
+    href="/"
+    type="button"
+    class="relative -ml-px inline-flex items-center border border-gray-800 bg-black px-4 py-2 text-sm font-medium text-gray-300 hover:bg-stone-900 focus:z-10 focus:border-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-800"
+    >About</a
+  >
+  <a
+    href="/"
+    type="button"
+    class="relative inline-flex items-center rounded-r-md border border-gray-800 bg-black px-4 py-2 text-sm font-medium text-gray-300 hover:bg-stone-900 focus:z-10 focus:border-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-800"
+    >Blog</a
+  >
+</span>
